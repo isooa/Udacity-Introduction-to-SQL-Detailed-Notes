@@ -1,0 +1,11 @@
+Quiz 1
+On which day-channel pair did the most events occur. (Mark all that are true)
+
+SELECT date_trunc('day', occurred_at) a, channel, COUNT(channel) c
+FROM web_events
+GROUP BY 1,2
+HAVING COUNT(channel) = (SELECT MAX(c1) 
+						 FROM (SELECT COUNT(channel) c1 
+							   FROM web_events
+				  				GROUP BY date_trunc ('day',occurred_at),channel)sub) 
+                  
