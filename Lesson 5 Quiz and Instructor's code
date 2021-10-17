@@ -73,7 +73,10 @@ WITH t1 AS (
 SELECT first_name, last_name, CONCAT(first_name, '.', last_name, '@', name, '.com'), LEFT(LOWER(first_name), 1) || RIGHT(LOWER(first_name), 1) || LEFT(LOWER(last_name), 1) || RIGHT(LOWER(last_name), 1) || LENGTH(first_name) || LENGTH(last_name) || REPLACE(UPPER(name), ' ', '')
 FROM t1;
 
-To create the sf_crime_data database. Then import result from the Udacity classroom
+To create the sf_crime_data database. 
+
+1. If on pgAdmin 4, Create the table using the code below, right click on the table and import the csv file loaded to this repository
+2. If on other SQL environment, just import csv directly
 
 DROP TABLE IF EXISTS sf_crime_data
 
