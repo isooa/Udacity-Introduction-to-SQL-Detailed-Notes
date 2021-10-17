@@ -1,1 +1,1 @@
-# Udacity-Access-Bank-Detailed-Notes
+# Udacity-Introduction-to-SQL-Detailed-Notes
